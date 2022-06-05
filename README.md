@@ -24,4 +24,29 @@ $ git://github.com/lolitosss2/ChargeMyCar.git
 
 3. Open Expo
 
-## TBD
+## The main idea
+
+The app should be as simple as possible. 
+1. Login
+2. Auto-detect your location
+3. Choose charging station
+4. Press Start Charging Button once you are ready.
+
+### Functionality
+
+1. Fetch Map from the API with all the charging stations available
+2. Filter charhing stations based on your current location latitude and longitude is used for bounding box
+3. Update you coordinated every time user moves
+4. POST to Ev.energy API with the ChargingPointID
+
+## Next steps
+
+The above is presented the very basic functionality of the app.
+
+What could be improved: 
+1. Login based on the faceID  because user is driving
+2. Pre-filtered user preferences such as: city, connectionType, currentType, currentStatus, paymentMethod and etc.
+3. Instead of showing the map, show the list of stations sorted by closest distance.
+4. 
+
+## 
