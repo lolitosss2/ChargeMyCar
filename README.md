@@ -13,7 +13,7 @@ $ git://github.com/lolitosss2/ChargeMyCar.git
 
 ## Prerequisites
 1. Have yarn or npm installed
-2. Have a mobile devide or Android Studio installed
+2. Have a mobile device or Android Studio installed
 3. Have Expo installed
 
 ### Open and Run Project in Expo
@@ -35,8 +35,8 @@ The app should be as simple as possible.
 ### Functionality
 
 1. Fetch Map from the API with all the charging stations available
-2. Filter charhing stations based on your current location latitude and longitude is used for bounding box
-3. Update you coordinated every time user moves
+2. Filter charging stations based on your current location latitude and longitude is used for bounding box
+3. Update the coordinates "every" time user moves
 4. POST to Ev.energy API with the ChargingPointID
 
 ## Next steps
@@ -47,6 +47,5 @@ What could be improved:
 1. Login based on the faceID  because user is driving
 2. Pre-filtered user preferences such as: city, connectionType, currentType, currentStatus, paymentMethod and etc.
 3. Instead of showing the map, show the list of stations sorted by closest distance.
-4. 
-
-## 
+4. Once user picked up the station open Waze/ Google Maps on order to navigae the user
+5. The interface for charging process shows up automatically once user arrived to its destination.
