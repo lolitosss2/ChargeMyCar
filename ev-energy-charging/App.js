@@ -6,6 +6,9 @@ import React, { useEffect, useState } from "react";
 export default function App() {
   const [latitude, setLatitude] = useState(56.00770576490109);
   const [longitude, setLongitude] = useState(12.637150614150471);
+  const [latitudeMax, setLatitudeMax] = useState(56.09774111614936);
+  const [longitudeMax, setLongitudeMax] = useState(12.753583917383537);
+
   const [chargingPointID, setChargingPointID] = useState(null);
 
   const fetchChargingStations = () => {
@@ -14,12 +17,14 @@ export default function App() {
     )
       .then((response) => response.json())
       .then((json) => {
+        //Ideally it would be better to fetch longitude and latitude 
+        //everytime user moves and update updateLocationMathod
         json.map((arr) => {
           //setLatitude(arr.AddressInfo.Latitude);
           //setLongitude(arr.AddressInfo.Longitude);
         });
 
-        if (longitude && latitude) updateLocation();
+        if (longitude && latitude) updateLocation(); // onMove and onClick Charging station
       })
       .catch((error) => {
         console.error(error);
@@ -28,7 +33,7 @@ export default function App() {
 
   const updateLocation = () => {
     return fetch(
-      `https://api.openchargemap.io/v3/poi?key=bc4be8cd-81a5-4a8c-90ac-2914f73f0b92&includecomments=true&maxresults=5&verbose=true&boundingbox=(${latitude},${longitude}),(${56.09774111614936},${12.753583917383537})`
+      `https://api.openchargemap.io/v3/poi?key=bc4be8cd-81a5-4a8c-90ac-2914f73f0b92&includecomments=true&maxresults=5&verbose=true&boundingbox=(${latitude},${longitude}),(${latitudeMax},${longitudeMax})`
     )
       .then((response) => response.json())
       .then((json) => {
