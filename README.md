@@ -52,4 +52,5 @@ What could be improved:
 4. Once user picked up the station open Waze/ Google Maps in order to navigate the user
 5. The interface for charging process shows up automatically once user arrived to its destination.
 
+![Screenshot](./app.jpg)
 
